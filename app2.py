@@ -1,44 +1,43 @@
-""" day_of_week = input("what day is it? ")
-if day_of_week == "Friday":
-    print("correct")
-elif day_of_week == "Saturday":
-    print("day after")
-else:
-    print("incorrect") """
-""" x = "test"
-print(f"hello {x}") """
-""" temp = 75
-if temp > 68:
-    print('warm')
-elif temp == 68:
-    print('perfect')
-else:
-    print('cold') """
-""" x = int(input())
-if x % 2 ==0:
-    print("even")
-else:
-    print("odd") """
+""" def calculate_tip():
+    money = float(input("How much was your check?Please enter only numerical values and decimal points. "))
+    customer = input("How was your customer service?Please do not use any capitals, spaces, or any other answers than the words bad, okay, good, or great. ")
 
-def calculate_tip(bill, money):
-money= float(int(input("How much was your check?")))
-bill= input("How was your customer service?")
-if bill== "bad":
-    print("0% tip")
-    return money
-elif bill== "okay":
-    print("15% tip")
-    return money*1.15
-elif bill== "good":
-    print("20% tip")
-    return money*1.2
-elif bill== "great":
-    print("25% tip")
-    return money*1.25
-else:
-    print("response not understood. Try using the words bad,okay,good, or great.")
+    if customer == "bad":
+        tip_percentage = 0
+    elif customer == "okay":
+        tip_percentage = 0.15
+    elif customer == "good":
+        tip_percentage = 0.20
+    elif customer == "great":
+        tip_percentage = 0.25
+    else:
+        print("Response not understood. Try using the words bad, okay, good, or great.")
+        return None  
 
-""" 
-    tips = {'bad': 0, 'okay': 0.15, 'good': 0.20, 'great': 0.25}
-return money *  bill
+    tip_amount = money * tip_percentage
+    total_amount = money + tip_amount
+
+    print(f"Tip amount: ${tip_amount:.2f}")
+    print(f"Total amount (including tip): ${total_amount:.2f}")
+    return total_amount
+
+calculate_tip()
  """
+def find_factors(n):
+    if n <= 0:
+        print("Please enter a positive integer.")
+        return []
+
+    factors = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            factors.append(i)
+
+    return factors
+
+# Example usage:
+number = int(input("Enter a positive integer: "))
+factors = find_factors(number)
+print(f"The factors of {number} are: {factors}")
+
+
