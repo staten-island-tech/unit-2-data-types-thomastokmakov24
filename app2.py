@@ -23,9 +23,9 @@
 
 calculate_tip()
  """
-def find_factors(n):
+""" def find_factors(n):
     if n <= 0:
-        print("Please enter a positive integer.")
+        print("Please enter a positive whole number.")
         return []
 
     factors = []
@@ -35,9 +35,13 @@ def find_factors(n):
 
     return factors
 
-# Example usage:
-number = int(input("Enter a positive integer: "))
+number = int(input("Enter a positive whole number. "))
 factors = find_factors(number)
 print(f"The factors of {number} are: {factors}")
 
-
+ """
+a=int(input("numero uno"))
+b=int(input("numero dos"))
+for i in range(2,a+1):
+    if a%i==0 and b:
+        return i{-1}
